@@ -1,8 +1,8 @@
-const form = document.querySelector('.cadastro');
+const form = document.getElementById('formCadastro');
 const nome = document.getElementById('nome');
 const email = document.getElementById('email');
 const plano = document.getElementById('plano');
-const listaUl = document.querySelector('listaClientes');
+const listaUl = document.querySelector('#listaClientes');
 
 function validarEmail(email) {
     return email.includes('@');
@@ -31,6 +31,7 @@ function renderizarUsuarios() {
 
 
 form.addEventListener('submit', function(event) {
+    console.log('Formulário enviado');
     event.preventDefault();
 
     const dadosUsuario = { 
