@@ -1,0 +1,152 @@
+/* Reset básico e Fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f9; /* Cinza bem clarinho de fundo */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    color: #005ca9; /* Azul Caixa */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #f39200; /* Detalhe laranja */
+    padding-bottom: 10px;
+}
+
+/* Layout dos Quadrados (Cards) */
+.container, .card-cliente {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #005ca9;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-left: 5px solid #f39200;
+    padding-left: 10px;
+}
+
+/* Estilização do Formulário */
+.cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: -10px; /* Aproxima a label do input */
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #005ca9;
+    box-shadow: 0 0 5px rgba(0, 92, 169, 0.2);
+}
+
+/* Validação de erro */
+input.invalid {
+    border: 2px solid #e74c3c;
+    background-color: #fdf2f2;
+}
+
+/* Botão Estilo Bancário */
+button {
+    background-color: #f39200; /* Laranja vibrante */
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #d88200;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Lista de Clientes Renderizada */
+#listaUsuarios {
+    list-style: none;
+}
+
+#listaUsuarios li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Container da lista */
+#listaUsuarios {
+    list-style: none;
+    margin-top: 15px;
+    border: 1px solid #d1d9e0;
+    border-radius: 4px;
+    overflow: hidden; /* Garante que as cores não passem da borda arredondada */
+}
+
+/* Estilo base de cada item */
+#listaClientes li {
+    padding: 15px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #d1d9e0;
+}
+
+/* CLIENTES ÍMPARES (1, 3, 5...) - Fundo Branco */
+#listaUsuarios li:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* CLIENTES PARES (2, 4, 6...) - Azul Caixa Suave e Visível */
+#listaUsuarios li:nth-child(even) {
+    background-color: #e8f1f8; /* Um azul claro bem definido */
+}
+
+/* Remove a borda do último item para não ficar duplo */
+#listaUsuarios li:last-child {
+    border-bottom: none;
+}
+/* Estilo para telas menores */
+@media (max-width: 480px) {
+    .container, .card-cliente {
+        padding: 20px;
+    }
+}

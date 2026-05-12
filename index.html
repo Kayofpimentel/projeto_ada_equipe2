@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <h1>Dashboard</h1>
+<div class="container">
+    <h2>Cadastro</h2>
+    <form class ="cadastro" id="formCadastro">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Nome" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Email" required>
+        <label for="plano">Tipo de Plano:</label>
+        <select id="plano" required>
+            <option value="" disabled selected>Selecione um plano</option>  
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="bronze">Bronze</option>
+        </select>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+</div>
+
+<div class="card-cliente">
+    <h2>Lista de Clientes</h2> <ul id="listaClientes"></ul>
+
+<!-- teste da Lia -->
+
+
+</div>
+     <script src="script.js"></script>   
+</body>
+
+</html>
