@@ -24,7 +24,7 @@ function renderizarUsuarios() {
     
     usuarios.forEach(usuario => {
         const li = document.createElement('li');
-        li.innerHTML = `<strong>${usuario.nome}</strong> - ${usuario.email} (Plano: ${usuario.plano})`;
+        li.innerHTML = `<strong>${usuario.nome}</strong> - ${usuario.email} - Plano  ${usuario.plano}`;
         listaUl.appendChild(li);
     });
 }
