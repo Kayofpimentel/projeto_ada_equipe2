@@ -24,7 +24,14 @@ function renderizarUsuarios() {
     
     usuarios.forEach(usuario => {
         const li = document.createElement('li');
+
+    let classePlano = '';
+        if (usuario.plano === 'gold') classePlano = 'plano-gold';
+        if (usuario.plano === 'silver') classePlano = 'plano-silver';
+        if (usuario.plano === 'bronze') classePlano = 'plano-bronze';
+        
         li.innerHTML = `<strong>${usuario.nome}</strong> - ${usuario.email} - Plano  ${usuario.plano}`;
+        li.classList.add(classePlano);
         listaUl.appendChild(li);
     });
 }

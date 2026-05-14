@@ -144,6 +144,22 @@ button:active {
 #listaClientes li:last-child {
     border-bottom: none;
 }
+
+.plano-gold {
+    color: #f6bc28; /* ouro escuro */
+    font-weight: bold;
+}
+
+.plano-silver {
+    color: #a9a9a9; /* prata escura */
+    font-weight: bold;
+}
+
+.plano-bronze {
+    color: #ac5905; /* bronze escuro */
+    font-weight: bold;
+}
+
 /* Estilo para telas menores */
 @media (max-width: 480px) {
     .container, .card-cliente {
