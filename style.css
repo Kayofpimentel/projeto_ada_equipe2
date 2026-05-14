@@ -160,6 +160,12 @@ button:active {
     font-weight: bold;
 }
 
+.desfocado {
+    filter: blur(5px);
+    pointer-events: none; /* impede clicar no formulário enquanto está desfocado */
+}
+
+
 /* Estilo para telas menores */
 @media (max-width: 480px) {
     .container, .card-cliente {
