@@ -3,12 +3,14 @@ const modal = document.getElementById('modalBoasVindas');
 const btnIniciar = document.getElementById('btnIniciar');
 const nomeUsuarioInput = document.getElementById('nomeUsuario');
 const saudacaoTopo = document.getElementById('saudacaoTopo');
+const containerFormulario = document.getElementById('containerFormulario');
 
 // Verifica se já existe nome salvo na sessão
 let nomePessoa = sessionStorage.getItem('nomePessoa');
 
 if (!nomePessoa) {
     modal.style.display = 'flex'; // abre o modal
+    containerFormulario.classList.add('desfocado'); // desfoca o formulário
 } else {
     saudacaoTopo.textContent = `Olá, ${nomePessoa}`;
 }
@@ -25,6 +27,9 @@ btnIniciar.addEventListener('click', () => {
     sessionStorage.setItem('nomePessoa', nomeDigitado);
     saudacaoTopo.textContent = `Olá, ${nomeDigitado}`;
     modal.style.display = 'none';
+
+    modal.style.display = 'none';
+    containerFormulario.classList.remove('desfocado');
 });
 
 
