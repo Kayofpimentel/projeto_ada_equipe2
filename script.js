@@ -54,6 +54,16 @@ email.addEventListener('blur', function() {
     }
 });
 
+function filtrarClientes() {
+    const termo = document.getElementById('campoBusca').value.toLowerCase();
+    const itens = document.querySelectorAll('#listaClientes li');
+
+    itens.forEach(li => {
+        const texto = li.innerText.toLowerCase();
+        li.style.display = texto.includes(termo) ? 'flex' : 'none';
+    });
+}
+
 
 function renderizarUsuarios() {
     listaUl.innerHTML = ''; 
@@ -67,7 +77,10 @@ function renderizarUsuarios() {
         if (usuario.plano === 'silver') classePlano = 'plano-silver';
         if (usuario.plano === 'bronze') classePlano = 'plano-bronze';
         
-        li.innerHTML = `<strong>${usuario.nome}</strong> - ${usuario.email} - Plano  ${usuario.plano} <button class="btn-excluir">Excluir</button>`;
+        li.innerHTML = `<strong>Nome: ${usuario.nome}</strong>
+                        <span>Email: ${usuario.email}</span>
+                        <span>Plano:  ${usuario.plano}</span>
+                        <button class="btn-excluir">Excluir</button>`;
         const botaoExcluir = li.querySelector('.btn-excluir');
 
         botaoExcluir.addEventListener('click', function () {

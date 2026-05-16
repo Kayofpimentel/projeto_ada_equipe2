@@ -130,6 +130,14 @@ button {
     margin-top: 10px;
 }
 
+.btn-excluir {
+    background-color: #f39200; /* Laranja para excluir */
+    margin-left: 10px;
+    width: 80px;
+    padding: 5px;
+    align-self: center;
+}
+
 button:hover {
     background-color: #d88200;
 }
@@ -142,6 +150,24 @@ button:active {
 #listaClientes {
     list-style: none;
 }
+
+#campoBusca {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#campoBusca:focus {
+    border-color: #005ca9;
+    box-shadow: 0 0 5px rgba(0, 92, 169, 0.2);
+}
+
 
 #listaClientes li {
     background-color: #f9f9f9;
