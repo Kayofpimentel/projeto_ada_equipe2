@@ -96,6 +96,13 @@ label {
     margin-bottom: -10px; /* Aproxima a label do input */
 }
 
+#mensagemCEP {
+    display: none;
+    color: #005ca9;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 input, select {
     padding: 12px;
     border: 1px solid #ccc;
