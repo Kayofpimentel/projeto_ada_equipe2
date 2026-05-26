@@ -7,30 +7,52 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Dashboard</h1>
-    <section id="formulario-cliente">
-      <h2>Cadastro</h2>
-      <form id="cadastro-cliente">
-        <p>
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" />
-        </p>
-        <p>
-          <label for="email">Email:</label>
-          <input type="text" id="email" name="email" />
-        </p>
-        <p>
-          <label for="tipoPlano">Tipo de Plano:</label>
-          <input type="text" id="tipoPlano" name="tipoPlano" />
-        </p>
+    <div id="modalBoasVindas" class="modal">
+      <div class="modal-content">
+        <h2>Login</h2>
+        <p>Qual é o seu nome?</p>
+        <form id="formBoasVindas">
+          <input type="text" required id="nomeUsuario" placeholder="Digite seu nome" />
+          <button id="btnIniciar">Iniciar</button>
+        </form>
+      </div>
+    </div>
 
-        <button type="submit">Cadastrar</button>
-      </form>
-    </section>
-    <section id="lista-clientes">
-      <div><form action=""></form></div>
-      <div><ul></ul></div>
-    </section>
+    <p id="saudacaoTopo" class="saudacao"></p>
+    <h1>Dashboard</h1>
+    <div class="container-horizontal">
+      <section id="cadastro-cliente">
+        <h2>Cadastro</h2>
+        <form id="formulario-cliente">
+          <p>
+            <label for="nome">Nome:</label>
+            <input type="text" required id="nome" name="nome" placeholder="João Pedro" />
+          </p>
+          <p>
+            <label for="email">Email:</label>
+            <input type="email" required id="email" name="email" placeholder="joao@exemplo.com" />
+          </p>
+          <p>
+            <label for="tipoPlano">Tipo de Plano:</label>
+            <select id="tipoPlano" name="tipoPlano" required>
+              <option value="Ouro">Ouro</option>
+              <option value="Prata">Prata</option>
+              <option value="Bronze">Bronze</option>
+            </select>
+          </p>
+
+          <button type="submit" id="btnCadastrarCliente">Cadastrar</button>
+        </form>
+      </section>
+      <section id="lista-clientes">
+        <div id="filtro-clientes">
+          <label for="busca-cliente">Buscar cliente:</label>
+          <input type="search" id="busca-cliente" name="busca-cliente" placeholder="Digite o nome do cliente" />
+        </div>
+        <div><ul></ul></div>
+      </section>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
