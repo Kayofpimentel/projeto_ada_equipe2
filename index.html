@@ -1,83 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div id="modalBoasVindas" class="modal">
-  <div class="modal-content">
-    <h2>Bem-vindo!</h2>
-    <p>Qual é o seu nome?</p>
-    <input type="text" id="nomeUsuario" placeholder="Digite seu nome">
-    <button id="btnIniciar">Iniciar</button>
-  </div>
-</div>
+      <div class="modal-content">
+        <h2>Bem-vindo!</h2>
+        <p>Qual é o seu nome?</p>
+        <input type="text" id="nomeUsuario" placeholder="Digite seu nome" />
+        <button id="btnIniciar">Iniciar</button>
+      </div>
+    </div>
 
-<div id="saudacaoTopo" class="saudacao"></div>
+    <div id="saudacaoTopo" class="saudacao"></div>
 
+    <div class="container-horizontal">
+      <div class="container" id="containerFormulario">
+        <h1>Cadastro</h1>
 
-    
-<div class="container" id="containerFormulario">
-    <h1>Cadastro</h1>
-    
-    <form class ="cadastro" id="formCadastro">
-        <label for="nome">Nome:</label>
-            <input type="text" id="nome" placeholder="Nome" required>
-        <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="Email" required>
-        <label for="cep">CEP:</label>
-            <input type="text" id="cep" maxlength="9" placeholder="00000-000" onblur="buscarCEP()" required>            
-            <div id="mensagemCEP" style="display:none; color:#005ca9; font-weight:bold; margin-bottom:10px;">
-                Buscando endereço...
-            </div>
-        <label>Rua</label>
-            <input readonly type="text" id="rua">
-        <label>Número</label>
-            <input type="text" id="numero">
-        <label>Complemento</label>
-            <input type="text" id="complemento">
-        <label>Bairro</label>
-            <input readonly type="text" id="bairro">
-        <label>Cidade</label>
-            <input readonly  type="text" id="cidade">
-        <label>Estado</label>
-            <input readonly type="text" id="estado">
-        <label for="plano">Tipo de Plano:</label>
-            <select id="plano" required>
-                <option value="" disabled selected>Selecione um plano</option>  
-                <option value="gold">Gold</option>
-                <option value="silver">Silver</option>
-                <option value="bronze">Bronze</option>
-            </select>
-        <button type="submit">Salvar</button>
-    </form>
+        <form class="cadastro" id="formCadastro">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" placeholder="Nome" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Email" required />
+          <label for="cep">CEP:</label>
+          <input type="text" id="cep" maxlength="9" placeholder="00000-000" onblur="buscarCEP()" required />
+          <div id="mensagemCEP" style="display: none; color: #005ca9; font-weight: bold; margin-bottom: 10px">Buscando endereço...</div>
+          <label>Rua</label>
+          <input readonly type="text" id="rua" />
+          <label>Número</label>
+          <input type="text" id="numero" />
+          <label>Complemento</label>
+          <input type="text" id="complemento" />
+          <label>Bairro</label>
+          <input readonly type="text" id="bairro" />
+          <label>Cidade</label>
+          <input readonly type="text" id="cidade" />
+          <label>Estado</label>
+          <input readonly type="text" id="estado" />
+          <label for="plano">Tipo de Plano:</label>
+          <select id="plano" required>
+            <option value="" disabled selected>Selecione um plano</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="bronze">Bronze</option>
+          </select>
+          <button type="submit">Salvar</button>
+        </form>
+      </div>
+      <div>
+        <input type="text" id="campoBusca" placeholder="Buscar cliente pelo nome ou email..." oninput="filtrarClientes()" />
 
-</div>
+        <div class="card-cliente">
+          <h2>Lista de Clientes</h2>
+          <ul id="listaClientes"></ul>
+        </div>
+      </div>
+    </div>
 
-
-
-
-<input 
-    type="text" 
-    id="campoBusca" 
-    placeholder="Buscar cliente pelo nome ou email..."
-    oninput="filtrarClientes()"
->
-
-
-<div class="card-cliente">
-    <h2>Lista de Clientes</h2>
-    <ul id="listaClientes"></ul>
-    
-
-
-</div>
-     <script src="script.js"></script>   
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
