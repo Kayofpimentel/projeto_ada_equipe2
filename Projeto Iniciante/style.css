@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eeeeee;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#operador {
+  text-align: center;
+  font-weight: bold;
+}
+
+.caixa {
+  background-color: white;
+  padding: 15px;
+  margin: 15px auto;
+  max-width: 700px;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+input, select, button {
+  padding: 9px;
+  font-size: 15px;
+}
+
+button {
+  background-color: #222222;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+input:read-only {
+  background-color: #dddddd;
+}
+
+.erro {
+  border: 2px solid red;
+  background-color: #ffe4e4;
+}
+
+.certo {
+  border: 2px solid green;
+}
+
+.avisoErro {
+  color: red;
+  font-weight: bold;
+}
+
+.avisoOk {
+  color: green;
+  font-weight: bold;
+}
+
+.card {
+  background-color: #f9f9f9;
+  padding: 12px;
+  margin-top: 10px;
+  border-left: 8px solid gray;
+}
+
+.gold {
+  border-left-color: gold;
+}
+
+.silver {
+  border-left-color: silver;
+}
+
+.bronze {
+  border-left-color: #cd7f32;
+}
+
+.botaoRemover {
+  background-color: crimson;
+}

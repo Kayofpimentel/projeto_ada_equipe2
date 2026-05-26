@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Clientes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Cadastro de Clientes</h1>
+  <p id="operador"></p>
+
+  <div class="caixa">
+    <h2>Novo cliente</h2>
+
+    <p id="aviso"></p>
+
+    <form id="formulario">
+      <label>Nome</label>
+      <input type="text" id="nome" required>
+
+      <label>Email</label>
+      <input type="email" id="email" required>
+
+      <label>Plano</label>
+      <select id="plano" required>
+        <option value="">Escolha</option>
+        <option value="Gold">Gold</option>
+        <option value="Silver">Silver</option>
+        <option value="Bronze">Bronze</option>
+      </select>
+
+      <label>CEP</label>
+      <input type="text" id="cep" placeholder="ex: 01001000" required>
+
+      <label>Rua</label>
+      <input type="text" id="rua" readonly>
+
+      <label>Bairro</label>
+      <input type="text" id="bairro" readonly>
+
+      <label>Cidade</label>
+      <input type="text" id="cidade" readonly>
+
+      <label>UF</label>
+      <input type="text" id="uf" readonly>
+
+      <button id="salvar" type="submit">Salvar</button>
+    </form>
+  </div>
+
+  <div class="caixa">
+    <h2>Buscar cliente</h2>
+    <input type="text" id="busca" placeholder="digite o nome">
+  </div>
+
+  <div class="caixa">
+    <h2>Clientes cadastrados</h2>
+    <div id="lista"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
